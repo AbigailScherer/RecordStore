@@ -1,0 +1,29 @@
+﻿<head>
+    <meta name="viewport" content="width=" device-width" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <div id="header">
+        <div style="margin-left: 25em; font-size: 20px; font-weight: bold;"></div>
+        <h1>Mynyl Vynyl</h1>
+    </div>
+
+    <div id="main">
+        <div style="width: 20%; float: left; color: black;">
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Albums", "Index", "Albums")</li>
+                <li>@Html.ActionLink("Artists", "Index", "Artists")</li>
+                <li>@Html.ActionLink("Genres", "Index", "Genres")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </div>
+
+        <div style="width: 80%; float: left;">
+            @RenderBody()
+        </div>
+    </div>
+</body>
